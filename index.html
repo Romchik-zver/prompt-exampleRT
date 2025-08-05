@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Генератор промптов для ИИ</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h2>Генератор промптов для ИИ</h2>
+
+    <label for="taskType">Тип задачи:</label>
+    <select id="taskType">
+      <option value="">Выберите тип задачи</option>
+      <option value="Обучение модели">Обучение модели</option>
+      <option value="Обработка текста">Обработка текста</option>
+      <option value="Анализ данных">Анализ данных</option>
+      <option value="Создание контента">Создание контента</option>
+    </select>
+
+    <label for="taskDescription">Описание задачи:</label>
+    <textarea
+      id="taskDescription"
+      rows="4"
+      placeholder="Опишите задачу подробно..."
+    ></textarea>
+
+    <div class="section">
+      <label>Тип общения:</label>
+      <div class="radio-group">
+        <label
+          ><input
+            type="radio"
+            name="communicationType"
+            value="формальный"
+            checked
+          />
+          Формальный</label
+        >
+        <label
+          ><input type="radio" name="communicationType" value="неформальный" />
+          Неформальный</label
+        >
+      </div>
+    </div>
+
+    <div class="section">
+      <label>Дополнительные требования:</label>
+      <div class="checkbox-group">
+        <label
+          ><input type="checkbox" id="requirePrecision" /> Требовать
+          точность</label
+        >
+        <label
+          ><input type="checkbox" id="requireConciseness" /> Конкретность</label
+        >
+        <label
+          ><input type="checkbox" id="useExamples" /> Использовать
+          примеры</label
+        >
+      </div>
+    </div>
+
+    <button id="generateBtn">Создать промпт</button>
+    <button id="copyBtn" disabled>Копировать промпт</button>
+
+    <div id="result"></div>
+
+    <script src="functional.js"></script>
+  </body>
+</html>
